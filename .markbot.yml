@@ -1,0 +1,113 @@
+repo: "code-a-website"
+canvasCourse: "web-design-1"
+
+inherit:
+  - naming-restrict-live
+  - git-2
+  - html
+  - aria-landmarks
+
+allFiles:
+  html:
+    has:
+      - "header"
+      - "header nav"
+      - "header nav li a"
+      - "main"
+      - "footer"
+    hasNot:
+      - 'img[alt=""]'
+      - "img:not([alt])"
+    search:
+      - "Berries"
+      - "Resources"
+      - "Home"
+
+html:
+  - path: "index.html"
+    has:
+      - "header > h1"
+      - 'header nav li a[href="index.html"]'
+      - 'header nav li a[href="berries/index.html"]'
+      - 'header nav li a[href="resources.html"]'
+      - "main > ul > li > a"
+    search:
+      - "Berries, berries, oh my!"
+      - "In everyday English, “berry” is a term for any"
+  - path: "resources.html"
+    has:
+      - "header > strong"
+      - 'header nav li a[href="index.html"]'
+      - 'header nav li a[href="berries/index.html"]'
+      - 'header nav li a[href="resources.html"]'
+      - "main > h1 + p"
+    search:
+      - "Resources"
+      - "Find out more about berries!"
+  - path: "berries/index.html"
+    has:
+      - "header > strong"
+      - 'header nav li a[href="../index.html"]'
+      - 'header nav li a[href="index.html"]'
+      - 'header nav li a[href="../resources.html"]'
+      - "main > h1 + p"
+      - "main > ul > li > a"
+    search:
+      - "Lots of berries—some you didn’t know!"
+      - "There are lots of berries in many different sizes"
+  - path: "berries/blueberries.html"
+    has:
+      - "header > strong"
+      - 'header nav li a[href="../index.html"]'
+      - 'header nav li a[href="index.html"]'
+      - 'header nav li a[href="../resources.html"]'
+      - "img[alt]"
+      - "main > h1 + img + p"
+      - 'img[src*="blueberries"]'
+    search:
+      - regex: 'alt\s*=\s*"[^"]{20,}"'
+        message: "Alt attributes must be full sentences — >= 20 characters"
+      - "Blueberries"
+      - "Blueberries are perennial flowering plants with indigo-colored berries"
+  - path: "berries/grapes.html"
+    has:
+      - "header > strong"
+      - 'header nav li a[href="../index.html"]'
+      - 'header nav li a[href="index.html"]'
+      - 'header nav li a[href="../resources.html"]'
+      - "img[alt]"
+      - "main > h1 + img + p"
+      - 'img[src*="grapes"]'
+    search:
+      - regex: 'alt\s*=\s*"[^"]{20,}"'
+        message: "Alt attributes must be full sentences — >= 20 characters"
+      - "Grapes"
+      - "Grapes can be eaten raw or they can be used for making wine"
+  - path: "berries/red-currants.html"
+    has:
+      - "header > strong"
+      - 'header nav li a[href="../index.html"]'
+      - 'header nav li a[href="index.html"]'
+      - 'header nav li a[href="../resources.html"]'
+      - "img[alt]"
+      - "main > h1 + img + p"
+      - 'img[src*="red-currant"]'
+    search:
+      - regex: 'alt\s*=\s*"[^"]{20,}"'
+        message: "Alt attributes must be full sentences — >= 20 characters"
+      - "Red currants"
+      - "With maturity, the tart flavour of redcurrant fruit is slightly greater than its blackcurrant"
+  - path: "berries/bananas.html"
+    has:
+      - "header > strong"
+      - 'header nav li a[href="../index.html"]'
+      - 'header nav li a[href="index.html"]'
+      - 'header nav li a[href="../resources.html"]'
+      - "img[alt]"
+      - "main > h1 + img + p"
+      - 'img[src*="banana"]'
+    search:
+      - regex: 'alt\s*=\s*"[^"]{20,}"'
+        message: "Alt attributes must be full sentences — >= 20 characters"
+      - "Bananas"
+      - "Not commonly considered a berry, bananas are botanically a berry:"
