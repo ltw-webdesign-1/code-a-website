@@ -9,7 +9,7 @@ deliverables: '7 HTML files, images'
 ## Overview
 
 - *Fork this repository.*
-- Using the sitemap you created in [Plan a website](https://learn-the-web.algonquindesign.ca/courses/web-design-1/week-07/#plan-a-website) as reference, code & organize the pages of the “Berries” website
+- Using the sitemap you created in [Plan a website](https://learntheweb.courses/courses/web-design-1/week-07/#plan-a-website) as reference, code & organize the pages of the “Berries” website
 - Write the necessary semantic HTML for all pages in the website.
 - Apply appropriate content accessibility considerations.
 - Use the photos within the `images/` folder as part of the website.
